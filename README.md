@@ -53,6 +53,35 @@ You can then use definitions as model methods in your views;
 {{-- https://example.test/image/750e57d1-288d-4b3e-9bf2-ae6b5a397e59/9bd8353c2ead08643d7676681b51c3c3b247936f/winkListingImage --}}
 ```
 
+## No Featured Image
+
+By default, if no featured image is attached to the Wink Post then a placeholder provided by placehold.it is used. You can override this if required by defining a `placeholderImage` method on your model.
+
+```php
+<?php
+
+namespace App;
+
+use Wink\WinkPost;
+use WinkImageManipulation\Traits\ImageManimulation;
+
+class BlogPost extends WinkPost
+{
+
+    use ImageManipulation;
+
+    ...
+
+    /**
+     * @return string
+     */
+    protected function placeholderImage(): string
+    {
+        return 'https://placeimg.com/%s/%s/any';
+    }
+
+}
+```
 
 ### MIT License
     
