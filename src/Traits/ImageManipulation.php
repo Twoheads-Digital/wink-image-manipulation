@@ -40,6 +40,14 @@ trait ImageManipulation
     }
 
     /**
+     * @return string
+     */
+    protected function placeholderImage(): string
+    {
+        return 'https://placehold.it/%sx%s';
+    }
+
+    /**
      * @param array $params
      * @return StreamedResponse
      */
@@ -90,7 +98,7 @@ trait ImageManipulation
     protected function imageRoute($name): string
     {
         if(!$this->getFeaturedImageBaseName()) {
-            return sprintf('https://placehold.it/%sx%s', $this->images[$name]['w'], $this->images[$name]['h']);
+            return sprintf($this->placeholderImage(), $this->images[$name]['w'], $this->images[$name]['h']);
         }
         return route('image', [$this, $this->UMID(), $name]);
     }
