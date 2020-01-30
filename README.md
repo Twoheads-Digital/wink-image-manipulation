@@ -50,6 +50,7 @@ You can then use definitions as model methods in your views;
 
 ```blade
 <img src="{{ $post->winkListingImage() }}" />
+// https://example.test/image/aefba831-12f7-4b58-9b62-c1e5c6f97994/winkListingImage
 ```
 
 
