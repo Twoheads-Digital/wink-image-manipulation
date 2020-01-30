@@ -1,0 +1,32 @@
+{
+    "name": "twoheads-digital/wink-image-manipulation",
+    "description": "Adds easy implementation of PHP League's Glide image package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luke Snowden",
+            "email": "luke@twoheads.digital"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1",
+        "laravel/framework": "^6.2",
+        "league/glide": "^1.5",
+        "league/glide-laravel": "^1.0",
+        "writingink/wink": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WinkImageManipulation\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WinkImageManipulation\\RouteServiceProvider"
+            ]
+        }
+    }
+}
