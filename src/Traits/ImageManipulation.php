@@ -82,10 +82,11 @@ trait ImageManipulation
      */
     public function UMID(): string
     {
-        $UMID = sha1(get_class($this));
+        $class = get_class($this);
+        $UMID = sha1($class);
 
-        Cache::rememberForever($UMID, function() use($UMID) {
-            return $UMID;
+        Cache::rememberForever($UMID, function() use($class) {
+            return $class;
         });
 
         return $UMID;
