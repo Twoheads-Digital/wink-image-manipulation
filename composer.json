@@ -11,11 +11,10 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.1",
-        "laravel/framework": "^6.2",
+        "laravel/framework": "^6",
         "league/glide": "^1.5",
         "league/glide-laravel": "^1.0",
-        "writingink/wink": "^0.1.0"
+        "writingink/wink": "^0.1"
     },
     "autoload": {
         "psr-4": {
