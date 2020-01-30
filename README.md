@@ -2,6 +2,8 @@
 
 This package is aimed to provide simple support for image manipulation for [Mohamed Said's](https://twitter.com/themsaid) [Wink](https://github.com/writingink/) publishing package.
 
+Under the hood it uses [PHP League's Glide API](https://glide.thephpleague.com/1.0/api/quick-reference/) which you can pass all parameters through to.
+
 ## Install
 ```
 composer require twoheads-digital/wink-image-manipulation
