@@ -34,7 +34,7 @@ trait ImageManipulation
             'response' 				=> new LaravelResponseFactory(app('request')),
             'source' 				=> Storage::getDriver(),
             'cache' 				=> Storage::getDriver(),
-            'source_path_prefix' 	=> 'images',
+            'source_path_prefix' 	=> 'public/wink/images',
             'cache_path_prefix' 	=> 'images/.cache'
         ]);
     }
@@ -46,7 +46,7 @@ trait ImageManipulation
     protected function response($params = []): StreamedResponse
     {
         return $this->server->getImageResponse(
-            '../public/wink/images/'.$this->getFeaturedImageBaseName(), $params
+            $this->getFeaturedImageBaseName(), $params
         );
     }
 
