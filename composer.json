@@ -10,8 +10,9 @@
         }
     ],
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "laravel/framework": "^6",
+        "laravel/framework": "^6.2",
         "league/glide": "^1.5",
         "league/glide-laravel": "^1.0",
         "writingink/wink": "^0.1"
@@ -27,5 +28,10 @@
                 "WinkImageManipulation\\RouteServiceProvider"
             ]
         }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
     }
 }
