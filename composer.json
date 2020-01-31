@@ -12,10 +12,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "laravel/framework": "^6.2",
         "league/glide": "^1.5",
         "league/glide-laravel": "^1.0",
-        "writingink/wink": "^0.1"
+        "writingink/wink": "^v0.1"
     },
     "autoload": {
         "psr-4": {
