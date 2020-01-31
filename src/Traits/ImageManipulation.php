@@ -3,7 +3,6 @@
 namespace WinkImageManipulation\Traits;
 
 use Exception;
-use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Storage;
 use League\Glide\Responses\LaravelResponseFactory;
 use League\Glide\Server;
@@ -13,11 +12,6 @@ use Illuminate\Support\Facades\Cache;
 
 trait ImageManipulation
 {
-
-    /**
-     * @var Filesystem
-     */
-    protected $system;
 
     /**
      * @var Server
