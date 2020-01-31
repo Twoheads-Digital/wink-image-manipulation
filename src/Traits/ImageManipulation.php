@@ -27,10 +27,9 @@ trait ImageManipulation
     /**
      * @response void
      */
-    public function setup()
+    public function server()
     {
-        $this->system = app('filesystem');
-        $this->server = ServerFactory::create([
+        return ServerFactory::create([
             'response' 				=> new LaravelResponseFactory(app('request')),
             'source' 				=> Storage::getDriver(),
             'cache' 				=> Storage::getDriver(),
@@ -53,7 +52,7 @@ trait ImageManipulation
      */
     protected function response($params = []): StreamedResponse
     {
-        return $this->server->getImageResponse(
+        return $this->server()->getImageResponse(
             $this->getFeaturedImageBaseName(), $params
         );
     }
