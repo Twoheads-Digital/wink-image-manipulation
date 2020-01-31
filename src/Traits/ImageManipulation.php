@@ -101,7 +101,7 @@ trait ImageManipulation
         if(!$this->getFeaturedImageBaseName()) {
             return sprintf($this->placeholderImage(), $this->images[$name]['w'], $this->images[$name]['h']);
         }
-        return route('image', [$this, $this->UMID(), $name]);
+        return route('wink-image', [$this, $this->UMID(), $name]);
     }
 
     /**

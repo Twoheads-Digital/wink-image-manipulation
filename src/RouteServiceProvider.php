@@ -26,14 +26,14 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
-        Route::get('image/{id}/{umid}/{method}', function($id, $umid, $method) {
+        Route::get('wink-image/{id}/{umid}/{method}', function($id, $umid, $method) {
 
             $name = Cache::get($umid);
 
             return (new $name)->findOrFail($id)->imageResponse($method);
 
         })
-            ->name('image');
+            ->name('wink-image');
     }
 
 }
