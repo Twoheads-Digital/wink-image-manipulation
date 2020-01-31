@@ -6,7 +6,7 @@ Under the hood it uses [PHP League's Glide API](https://glide.thephpleague.com/1
 
 ## Install
 ```
-composer require twoheads-digital/wink-image-manipulation
+composer require twoheads-digital/wink-image-manipulation:^v0.0.1
 ```
 
 ## Apply to custom model
