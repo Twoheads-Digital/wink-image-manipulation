@@ -14,7 +14,7 @@
     "require": {
         "league/glide": "^1.5",
         "league/glide-laravel": "^1.0",
-        "writingink/wink": "^v0.1"
+        "themsaid/wink": "*"
     },
     "autoload": {
         "psr-4": {
